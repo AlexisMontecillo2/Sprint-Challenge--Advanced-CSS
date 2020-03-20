@@ -1,1 +1,39 @@
 // Mixins Here
+
+//for border checking so you know where you are working.
+//lb stands for locate box
+.lb(){
+    border: blue 3px dashed;
+}
+
+//to make the items not visable
+.notForMobile {
+    display: none;
+}
+
+//for the buttons
+.bttn(@width, @height, @button-bg, @font-color, @makeBig, @animate){
+    display: block;
+    width: @width;
+    height: @height;
+    background-color: @button-bg;
+    color: @font-color;
+    font-size: 2rem;
+    border-radius: 8px;
+    text-decoration: none;
+    text-align: center;
+    transition: @makeBig;
+    padding-top: 5px;
+    // all .5s ease-in-out;
+
+    &:hover{
+        background-color: @font-color;
+        color: @button-bg;
+        transform: @animate;
+        // scale(1.25);
+    }
+}// end of button
+
+.mobileImg{
+    width: 100%;
+}
